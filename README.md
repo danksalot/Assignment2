@@ -115,7 +115,7 @@ The student final grade will be decided according to the following matrix:
 
 While writing the code you must do the following:
 
-1.       Create a structure which holds the following information:
+1. Create a structure which holds the following information:
 
                         i.   student_id  should be able to store 5 characters;
 
@@ -137,12 +137,12 @@ While writing the code you must do the following:
 
                                                             ix.      grade  should be able to store 3 charecters;
 
-2.       Create an array to store the information about the number of students which user inputs. This should be done dynamically using ‘new’ operator.
+2. Create an array to store the information about the number of students which user inputs. This should be done dynamically using ‘new’ operator.
 
-3.       Prompt the user and get the user input for the student id and marks. Make sure the student ID is 5 characters long, starts with ‘S’ following by 4 numbers. Make sure that marks entered are between 0 and 100.
+3. Prompt the user and get the user input for the student id and marks. Make sure the student ID is 5 characters long, starts with ‘S’ following by 4 numbers. Make sure that marks entered are between 0 and 100.
 
-4.       Store all the information in the array of structure declared in step 1 and 2.
+4. Store all the information in the array of structure declared in step 1 and 2.
 
-5.       Display the information stored in the array.
+5. Display the information stored in the array.
 
-6.       All the information when displayed should be right aligned
+6. All the information when displayed should be right aligned
