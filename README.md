@@ -116,26 +116,15 @@ The student final grade will be decided according to the following matrix:
 While writing the code you must do the following:
 
 1. Create a structure which holds the following information:
-
-                        i.   student_id  should be able to store 5 characters;
-
-                       ii.   cosc1_marks should be able to store int;
-
-                     iii.   cosc2_marks should be able to store int;
-
-                       iv.   cosc3_marks should be able to store int;
-
-                        v.   cosc4_marks should be able to store int;
-
-                       vi.   cosc5_marks should be able to store int;
-
-                     vii.   StudentotalScore should be able to store int and is sum of all the marks in 5 subjects.
-
- 
-
-                    viii.   percentage for the total marks obtained;
-
-                                                            ix.      grade  should be able to store 3 charecters;
+  1. student_id  should be able to store 5 characters;
+  1. cosc1_marks should be able to store int;
+  1. cosc2_marks should be able to store int;
+  1. cosc3_marks should be able to store int;
+  1. cosc4_marks should be able to store int;
+  1. cosc5_marks should be able to store int;
+  1. StudentotalScore should be able to store int and is sum of all the marks in 5 subjects. 
+  1. percentage for the total marks obtained;
+  1. grade  should be able to store 3 charecters;
 
 2. Create an array to store the information about the number of students which user inputs. This should be done dynamically using ‘new’ operator.
 
