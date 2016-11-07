@@ -18,5 +18,7 @@ class Student
 };
 
 Student * GetStudentFromInput(int);
+bool StudentIdIsValid(int);
+void ScoreIsValid(int, Student *);
 
 #endif
