@@ -14,6 +14,7 @@ class Student
         int TotalScore();
         double TotalPercent();
         std::string Grade();
+        bool AllAbove(int);
 };
 
 Student * GetStudentFromInput(int);
