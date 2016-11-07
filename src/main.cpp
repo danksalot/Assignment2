@@ -10,7 +10,7 @@ int main()
 {
     int NumberOfStudents = 0;
     
-    cout << "How many students are there? "; 
+    cout << "How many entries are there? "; 
     cin >> NumberOfStudents;
     
     Student students [NumberOfStudents];
@@ -37,7 +37,7 @@ void PrintResults(int NumberOfStudents, Student *students)
     printf ("| %7s | %7s | %7s | %7s | %7s | %7s | %7s | %7s | %7s |\n", "-------", "-------", "-------", "-------", "-------", "-------", "-------", "-------", "-------");
     for (int i = 0; i < NumberOfStudents; i++)
     {
-        printf ("| %7s | %7d | %7d | %7d | %7d | %7d | %7d | %07.3f | %7s |\n", 
+        printf ("| %7s | %7d | %7d | %7d | %7d | %7d | %7d | %7.2f | %7s |\n", 
             students[i].ID.c_str(),
             students[i].Class1,
             students[i].Class2,
