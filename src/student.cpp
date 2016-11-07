@@ -40,16 +40,66 @@ Student * GetStudentFromInput(int studentNumber)
     Student *student = new Student();
     cout << "Enter the ID of Student " << studentNumber << ": ";
     cin >> student->ID;
+    while (!StudentIdIsValid(student->ID))
+    {
+        cout << "StudentID must be 'S' followed by four digits.  Enter the ID of Student " << studentNumber << ": ";
+        cin >> student->ID;
+    }
+
     cout << "Enter the grade for COSC1 earned by Person " << studentNumber << ": ";
     cin >> student->Class1;
+    while (!ScoreIsValid(student->Class1))
+    {
+        cout << "Scores must be between 0 and 100.  Enter the grade for COSC1 earned by Person " << studentNumber << ": ";
+        cin >> student->Class1;
+    }
+
     cout << "Enter the grade for COSC2 earned by Person " << studentNumber << ": ";
     cin >> student->Class2;
+    while (!ScoreIsValid(student->Class2))
+    {
+        cout << "Scores must be between 0 and 100.  Enter the grade for COSC2 earned by Person " << studentNumber << ": ";
+        cin >> student->Class2;
+    }
+
     cout << "Enter the grade for COSC3 earned by Person " << studentNumber << ": ";
     cin >> student->Class3;
+    while (!ScoreIsValid(student->Class3))
+    {
+        cout << "Scores must be between 0 and 100.  Enter the grade for COSC3 earned by Person " << studentNumber << ": ";
+        cin >> student->Class3;
+    }
+
     cout << "Enter the grade for COSC4 earned by Person " << studentNumber << ": ";
     cin >> student->Class4;
+    while (!ScoreIsValid(student->Class4))
+    {
+        cout << "Scores must be between 0 and 100.  Enter the grade for COSC4 earned by Person " << studentNumber << ": ";
+        cin >> student->Class4;
+    }
+
     cout << "Enter the grade for COSC5 earned by Person " << studentNumber << ": ";
     cin >> student->Class5;
+    while (!ScoreIsValid(student->Class5))
+    {
+        cout << "Scores must be between 0 and 100.  Enter the grade for COSC5 earned by Person " << studentNumber << ": ";
+        cin >> student->Class5;
+    }
     
     return student;
+}
+
+bool StudentIdIsValid(string input)
+{
+    return input.length() == 5 &&
+        input.at(0) == 'S' &&
+        isdigit(input.at(1)) == 1 &&
+        isdigit(input.at(2)) == 1 &&
+        isdigit(input.at(3)) == 1 &&
+        isdigit(input.at(4)) == 1;
+}
+
+bool ScoreIsValid(int input)
+{
+    return 0 <= input && input <= 100;
 }
