@@ -16,4 +16,6 @@ class Student
         std::string Grade();
 };
 
+Student * GetStudentFromInput(int);
+
 #endif
