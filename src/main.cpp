@@ -10,7 +10,7 @@ int main()
 {
     int NumberOfStudents = 0;
     
-    cout << "How many entries are there? " << endl; 
+    cout << "How many students are there? "; 
     cin >> NumberOfStudents;
     
     Student students [NumberOfStudents];
