@@ -4,6 +4,8 @@
 using namespace std;
 
 void GetInputFromUser(int, Student *);
+bool ValidateStudentID(string);
+bool ValidateScore(int);
 void PrintResults(int, Student *);
 
 int main()
@@ -30,6 +32,21 @@ void GetInputFromUser(int NumberOfStudents, Student *students)
         Student *student = GetStudentFromInput(i);
         students[i-1] = *student;
     }
+}
+
+bool ValidateStudentID(string input)
+{
+    return input.length() == 5 &&
+        input.at(0) == 'S' &&
+        isdigit(input.at(1)) == 1 &&
+        isdigit(input.at(2)) == 1 &&
+        isdigit(input.at(3)) == 1 &&
+        isdigit(input.at(4)) == 1;
+}
+
+bool ValidateScore(int input)
+{
+    return 0 <= input && input <= 100;
 }
 
 void PrintResults(int NumberOfStudents, Student *students)
