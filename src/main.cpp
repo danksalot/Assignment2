@@ -1,18 +1,51 @@
+#include <iostream>
+#include "student.h"
+
 using namespace std;
+
+void GetInputFromUser(int, Student *);
+void PrintResults(int, Student *);
 
 int main()
 {
-    Student *p1 = new Student();
-    p1->ID = "S0001";
-    p1->Class1 = 10;
-    p1->Class2 = 20;
-    p1->Class3 = 30;
-    p1->Class4 = 40;
-    p1->Class5 = 50;
+    int NumberOfStudents = 0;
     
-   printf ("| %7s | %7s | %7s | %7s | %7s | %7s | %7s | %7s | %7s |\n", "ID", "COSC1", "COSC2", "COSC3", "COSC4", "COSC5", "Total", "Percent", "Grade");
-   printf ("| %7s | %7s | %7s | %7s | %7s | %7s | %7s | %7s | %7s |\n", "-------", "-------", "-------", "-------", "-------", "-------", "-------", "-------", "-------");
-   printf ("| %7s | %7d | %7d | %7d | %7d | %7d | %7d | %.4f | %7s |\n", p1->ID.c_str(),p1->Class1,p1->Class2,p1->Class3,p1->Class4,p1->Class5,p1->TotalScore(),p1->TotalPercent(),p1->Grade().c_str());
-   
-   return 0;
+    cout << "How many entries are there? " << endl; 
+    cin >> NumberOfStudents;
+    
+    Student students [NumberOfStudents];
+    
+    GetInputFromUser(NumberOfStudents, students);
+    
+    PrintResults(NumberOfStudents, students);
+    
+    return 0;
+}
+
+void GetInputFromUser(int NumberOfStudents, Student *students)
+{
+    for (int i = 1; i <= NumberOfStudents; i++)
+    {
+        Student *student = GetStudentFromInput(i);
+        students[i-1] = *student;
+    }
+}
+
+void PrintResults(int NumberOfStudents, Student *students)
+{
+    printf ("| %7s | %7s | %7s | %7s | %7s | %7s | %7s | %7s | %7s |\n", "ID", "COSC1", "COSC2", "COSC3", "COSC4", "COSC5", "Total", "Percent", "Grade");
+    printf ("| %7s | %7s | %7s | %7s | %7s | %7s | %7s | %7s | %7s |\n", "-------", "-------", "-------", "-------", "-------", "-------", "-------", "-------", "-------");
+    for (int i = 0; i < NumberOfStudents; i++)
+    {
+        printf ("| %7s | %7d | %7d | %7d | %7d | %7d | %7d | %.4f | %7s |\n", 
+            students[i].ID.c_str(),
+            students[i].Class1,
+            students[i].Class2,
+            students[i].Class3,
+            students[i].Class4,
+            students[i].Class5,
+            students[i].TotalScore(),
+            students[i].TotalPercent(),
+            students[i].Grade().c_str());
+    }
 }
