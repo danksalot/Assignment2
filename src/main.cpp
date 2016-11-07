@@ -8,12 +8,13 @@ void PrintResults(int, Student *);
 
 int main()
 {
+    Student* students = 0;
     int NumberOfStudents = 0;
     
     cout << "How many entries are there? "; 
     cin >> NumberOfStudents;
     
-    Student students [NumberOfStudents];
+    students = new Student[NumberOfStudents];
     
     GetInputFromUser(NumberOfStudents, students);
     
