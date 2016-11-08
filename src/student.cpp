@@ -15,24 +15,24 @@ double Student::TotalPercent()
 
 std::string Student::Grade()
 {
-    if (TotalPercent() > 90 && AllAbove(90)) { return "A+"; }
-    else if (TotalPercent() > 90 && !AllAbove(90)) { return "A";  }
-    else if (TotalPercent() > 80 &&  AllAbove(80)) { return "B+"; }
-    else if (TotalPercent() > 80 && !AllAbove(80)) { return "B";  }
-    else if (TotalPercent() > 70 &&  AllAbove(70)) { return "C+"; }
-    else if (TotalPercent() > 70 && !AllAbove(70)) { return "C";  }
-    else if (TotalPercent() > 60 &&  AllAbove(60)) { return "D+"; }
-    else if (TotalPercent() > 60 && !AllAbove(60)) { return "D";  }
+    if      (TotalPercent() > 90 && AllAbove(90)) { return "A+"; }
+    else if (TotalPercent() > 90)                 { return "A";  }
+    else if (TotalPercent() > 80 && AllAbove(80)) { return "B+"; }
+    else if (TotalPercent() > 80)                 { return "B";  }
+    else if (TotalPercent() > 70 && AllAbove(70)) { return "C+"; }
+    else if (TotalPercent() > 70)                 { return "C";  }
+    else if (TotalPercent() > 60 && AllAbove(60)) { return "D+"; }
+    else if (TotalPercent() > 60)                 { return "D";  }
     else return "F";
 }
 
 bool Student::AllAbove(int minScore)
 {
     return Class1 >= minScore &&
-        Class2 >= minScore &&
-        Class3 >= minScore &&
-        Class4 >= minScore &&
-        Class5 >= minScore;
+           Class2 >= minScore &&
+           Class3 >= minScore &&
+           Class4 >= minScore &&
+           Class5 >= minScore;
 }
 
 Student * GetStudentFromInput(int studentNumber)
