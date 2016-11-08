@@ -18,7 +18,7 @@ class Student
 };
 
 Student * GetStudentFromInput(int);
-bool StudentIdIsValid(int);
-void ScoreIsValid(int, Student *);
+bool StudentIdIsValid(std::string);
+bool ScoreIsValid(int);
 
 #endif
