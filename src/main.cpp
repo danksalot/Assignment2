@@ -11,8 +11,10 @@ int main()
     Student* students = 0;
     int NumberOfStudents = 0;
     
-    cout << "How many entries are there? "; 
-    cin >> NumberOfStudents;
+    do {
+        cout << "Student list can contain 3 - 10 students.  How many students are there? "; 
+        cin >> NumberOfStudents;
+    } while (NumberOfStudents < 3 || NumberOfStudents > 10);
     
     students = new Student[NumberOfStudents];
     
