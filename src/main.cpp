@@ -20,6 +20,8 @@ int main()
     
     PrintResults(NumberOfStudents, students);
     
+    delete[] students;
+    
     return 0;
 }
 
