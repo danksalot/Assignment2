@@ -41,32 +41,32 @@ Student * GetStudentFromInput(int studentNumber)
     do {
         cout << "StudentID format is 'S' followed by four digits.  Please enter the ID of Student " << studentNumber << ": ";
         cin >> student->ID;
-    } while (!StudentIdIsValid(student->ID))
+    } while (!StudentIdIsValid(student->ID));
 
     do {
         cout << "Enter the score (0 - 100) for COSC1 earned by Person " << studentNumber << ": ";
         cin >> student->Class1;
-    } while (!ScoreIsValid(student->Class1))
+    } while (!ScoreIsValid(student->Class1));
 
     do {
         cout << "Enter the score (0 - 100) for COSC2 earned by Person " << studentNumber << ": ";
         cin >> student->Class2;
-    } while (!ScoreIsValid(student->Class2))
+    } while (!ScoreIsValid(student->Class2));
 
     do {
         cout << "Enter the score (0 - 100) for COSC3 earned by Person " << studentNumber << ": ";
         cin >> student->Class3;
-    } while (!ScoreIsValid(student->Class3))
+    } while (!ScoreIsValid(student->Class3));
 
     do {
         cout << "Enter the score (0 - 100) for COSC4 earned by Person " << studentNumber << ": ";
         cin >> student->Class4;
-    } while (!ScoreIsValid(student->Class4))
+    } while (!ScoreIsValid(student->Class4));
     
     do {
         cout << "Enter the score (0 - 100) for COSC5 earned by Person " << studentNumber << ": ";
         cin >> student->Class5;
-    } while (!ScoreIsValid(student->Class5))
+    } while (!ScoreIsValid(student->Class5));
     
     return student;
 }
