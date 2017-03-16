@@ -38,40 +38,18 @@ bool Student::AllAbove(int minScore)
 Student * GetStudentFromInput(int studentNumber)
 {
     Student *student = new Student();
-    do {
-        cout << "StudentID format is 'S' followed by four digits.  Please enter the ID of Student " << studentNumber << ": ";
-        cin >> student->ID;
-    } while (!StudentIdIsValid(student->ID));
 
-    do {
-        cout << "Enter the score (0 - 100) for COSC1 earned by Person " << studentNumber << ": ";
-        cin >> student->Class1;
-    } while (!ScoreIsValid(student->Class1));
-
-    do {
-        cout << "Enter the score (0 - 100) for COSC2 earned by Person " << studentNumber << ": ";
-        cin >> student->Class2;
-    } while (!ScoreIsValid(student->Class2));
-
-    do {
-        cout << "Enter the score (0 - 100) for COSC3 earned by Person " << studentNumber << ": ";
-        cin >> student->Class3;
-    } while (!ScoreIsValid(student->Class3));
-
-    do {
-        cout << "Enter the score (0 - 100) for COSC4 earned by Person " << studentNumber << ": ";
-        cin >> student->Class4;
-    } while (!ScoreIsValid(student->Class4));
-    
-    do {
-        cout << "Enter the score (0 - 100) for COSC5 earned by Person " << studentNumber << ": ";
-        cin >> student->Class5;
-    } while (!ScoreIsValid(student->Class5));
+    student->ID = GetStudentIdFromInput(studentNumber, "StudentID format is 'S' followed by four digits.  Please enter the ID of Student ");
+    student->Class1 = GetScoreFromInput(studentNumber, "Enter the score (0 - 100) for COSC1 earned by Person ");
+    student->Class2 = GetScoreFromInput(studentNumber, "Enter the score (0 - 100) for COSC2 earned by Person ");
+    student->Class3 = GetScoreFromInput(studentNumber, "Enter the score (0 - 100) for COSC3 earned by Person ");
+    student->Class4 = GetScoreFromInput(studentNumber, "Enter the score (0 - 100) for COSC4 earned by Person ");
+    student->Class5 = GetScoreFromInput(studentNumber, "Enter the score (0 - 100) for COSC5 earned by Person ");
     
     return student;
 }
 
-string GetStudentIdFromInput(string message, string studentNumber)
+string GetStudentIdFromInput(int studentNumber, string message)
 {
     string result;
     
@@ -83,7 +61,7 @@ string GetStudentIdFromInput(string message, string studentNumber)
     return result;
 }
 
-int GetScoreFromInput(string message, string studentNumber)
+int GetScoreFromInput(int studentNumber, string message)
 {
     int result;
     
