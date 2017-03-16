@@ -71,6 +71,30 @@ Student * GetStudentFromInput(int studentNumber)
     return student;
 }
 
+string GetStudentIdFromInput(string message, string studentNumber)
+{
+    string result;
+    
+    do {
+        cout << message << studentNumber << ": ";
+        cin >> result;
+    } while (!StudentIdIsValid(result));
+    
+    return result;
+}
+
+int GetScoreFromInput(string message, string studentNumber)
+{
+    int result;
+    
+    do {
+        cout << message << studentNumber << ": ";
+        cin >> result;
+    } while (!ScoreIsValid(result));
+    
+    return result;
+}
+
 bool StudentIdIsValid(string input)
 {
     return input.length() == 5 &&
