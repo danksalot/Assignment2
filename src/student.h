@@ -18,6 +18,8 @@ class Student
 };
 
 Student * GetStudentFromInput(int);
+string GetStringFromInput(string, string);
+string GetIntFromInput(string, string);
 bool StudentIdIsValid(std::string);
 bool ScoreIsValid(int);
 
