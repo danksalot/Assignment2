@@ -1,4 +1,7 @@
-# Assignment2
+# Class Gradebook
+
+# Assignment:
+
 In this project you are going to create a program which will evaluate the performance of a class. This class can have anywhere between 3 and 10 students. Each of the student would be required to take 5 subjects. These are COSC1, COSC2, COSC3, COSC4, and COSC5. This is how your program would work.
 
 Here is an example output.
